@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Student Grade Calculator</title>
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+   <!-- External CSS -->
+   <link rel="stylesheet" href="styles.css" />
+   <!-- Internal CSS for simplicity -->
+   <style>
+      body {
+         margin: 0;
+         font-family: 'Montserrat', sans-serif;
+         color: #333;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background-image: url('background.jpg'); /* Use the correct path for your image */
+         background-size: cover;
+         background-position: center;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .container {
+         background-color: royalblue;
+         padding: 40px;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         max-width: 400px;
+         width: 100%;
+         text-align: center;
+         z-index: 2; /* Ensure the container is above the background image */
+      }
+
+      h1 {
+         font-size: 28px;
+         margin-bottom: 20px;
+         color: whitesmoke;
+      }
+
+      h2 {
+         font-size: 22px;
+         margin-bottom: 20px;
+         color: whitesmoke;
+         font-weight: 600;
+      }
+
+      .form-group {
+         margin-bottom: 15px;
+         text-align: left;
+      }
+
+      .form-group label {
+         display: block;
+         margin-bottom: 5px;
+         font-weight: 600;
+         color: gold;
+      }
+
+      .form-control {
+         width: 100%;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         font-size: 16px;
+         color: black;
+      }
+
+      .form-button {
+         width: 100%;
+         padding: 12px;
+         background-color: green;
+         border: none;
+         border-radius: 4px;
+         color: white;
+         font-size: 16px;
+         cursor: pointer;
+         transition: background-color 0.3s;
+      }
+
+      .form-button:hover {
+         background-color: red;
+      }
+
+      .showdata {
+         margin-top: 20px;
+         font-size: 18px;
+         color: white;
+         font-weight: 600;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 50px; /* Adjust this as needed */
+         width: 100%;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <h1>Check your Grade and Percentage</h1>
+      <h2>Student Grade Calculator</h2>
+      <div class="form-group">
+         <label for="chemistry">Enter Student's Marks in Chemistry:</label>
+         <input
+            type="text"
+            class="form-control"
+            placeholder="Chemistry"
+            id="chemistry" />
+      </div>
+      <div class="form-group">
+         <label for="maths">Enter Student's Marks in Maths:</label>
+         <input
+            type="text"
+            class="form-control"
+            placeholder="Maths"
+            id="maths" />
+      </div>
+      <div class="form-group">
+         <label for="phy">Enter Student's Marks in Physics:</label>
+         <input
+            type="text"
+            class="form-control"
+            placeholder="Physics"
+            id="phy" />
+      </div>
+      <div>
+         <input
+            type="button"
+            value="Show Percentage"
+            class="form-button"
+            onclick="calculate()" />
+      </div>
+      <div class="showdata">
+         <p id="showdata"></p>
+      </div>
+   </div>
+   <!-- External JavaScript -->
+   <script src="script.js"></script>
+</body>
+</html>
